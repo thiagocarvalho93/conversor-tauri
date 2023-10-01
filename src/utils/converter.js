@@ -5,7 +5,7 @@ const convert = (type, sourceUnit, targetUnit, value) => {
 
   if (type !== "tmp") {
     if (factors && factors[sourceUnit] && factors[targetUnit]) {
-      return (factors[targetUnit] / factors[sourceUnit]) * value;
+      return (factors[sourceUnit] / factors[targetUnit]) * value;
     }
     return 0;
   }

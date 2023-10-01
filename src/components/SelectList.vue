@@ -40,25 +40,22 @@ export default {
 }
 
 .select-list-container {
-  background-color: #111111;
+  background-color: var(--color-surface-mixed-100);
   height: 415px;
   width: 179px;
   overflow-y: auto;
 }
 
 .list-item {
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   padding: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.5s;
 }
 
-.list-item:hover {
-  background-color: #212121;
-}
-
-.selected {
-  background-color: #212121;
+.selected, .list-item:hover {
+  background-color: var(--color-primary-600);
+  color: var(--color-surface-mixed-100);
 }
 
 /* width */
@@ -68,16 +65,17 @@ export default {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #383838;
+  background: var(--color-surface-mixed-100);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #212121;
+  background: var(--color-surface-mixed-200);
+  border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--color-primary-600);
 }
 </style>

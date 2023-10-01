@@ -12,15 +12,15 @@ import SelectList from "./components/SelectList.vue";
       <!-- body content -->
       <SelectList :items="unitList" v-model="sourceUnit" />
       <div class="middle-section">
-        <unicon width="20px" :name="selectedType.icon" fill="white"></unicon>
+        <unicon width="20px" :name="selectedType.icon" fill="var(--color-primary-400)"></unicon>
         <span class="type-title">
           {{ selectedType.title }}
         </span>
         <input type="number" v-model="inputValue" />
         <input type="number" :value="outputValue" readonly />
-        <button @click="copy">
-          <unicon name="copy" fill="white"></unicon>
-        </button>
+        <div class="btn-copy" @click="copy">
+          <unicon name="copy" fill="var(--color-surface-mixed-100)"></unicon>
+        </div>
       </div>
       <SelectList :items="unitList" v-model="targetUnit" />
     </div>
@@ -90,7 +90,7 @@ export default {
 
 body {
   overflow: hidden;
-  background-color: #383838;
+  background-color: var(--color-surface-mixed-300);
   color: white;
 }
 
@@ -106,7 +106,6 @@ body {
 }
 
 .middle-section {
-  border-radius: 5px;
   height: 380px;
   width: 179px;
   display: flex;
@@ -117,17 +116,19 @@ body {
 
 .type-title {
   margin-bottom: 40px;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 input[type="number"] {
   width: 120px;
   margin-bottom: 20px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   height: 30px;
   font-size: large;
-  border: solid 1px #111111;
+  border: solid 1px var(--color-surface-mixed-200);
   padding-inline: 6px;
-  background-color: #212121;
+  background-color: var(--color-surface-mixed-200);
   color: white;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
@@ -139,21 +140,22 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
-button {
-  margin-bottom: 20px;
-  border-radius: 4px;
-  height: 30px;
-  border: solid 1px #111111;
-  font-size: large;
-  padding-block: 2px;
-  padding-inline: 10px;
-  background-color: #111111;
-  color: white;
-  cursor: pointer;
+input:focus-visible {
+  outline: 2px solid var(--color-primary-400);
+  border-radius: 3px;
 }
 
-button:hover {
-  background-color: #212121;
-  border: solid 1px #212121;
+.btn-copy {
+  border-radius: var(--border-radius);
+  height: 30px;
+  width: 120px;
+  font-size: large;
+  text-align: center;
+  padding-block: 1px;
+  padding-inline: 6px;
+  background-color: var(--color-primary-400);
+  color: var(--color-surface-mixed-100);
+  cursor: pointer;
+  font-weight: 600;
 }
 </style>

@@ -26,7 +26,7 @@ export default {
 <style scoped>
 .titlebar {
   height: 30px;
-  background: #212121;
+  background: var(--color-surface-mixed-200);
   user-select: none;
   display: flex;
   justify-content: flex-end;
@@ -46,11 +46,11 @@ export default {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 .titlebar-button:hover {
   transition: background 0.4s;
-  background: #111111;
+  background: var(--color-surface-mixed-100);
 }
 
 .close:hover {

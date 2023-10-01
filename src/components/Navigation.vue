@@ -47,7 +47,7 @@ export default {
 <style scoped>
 .main-menu {
   margin-top: 38px;
-  background: #212121;
+  background: var(--color-surface-mixed-200);
   position: absolute;
   left: 0;
   top: 0;
@@ -69,12 +69,12 @@ li {
 }
 
 li:hover {
-  background-color: #111111;
+  background-color: var(--color-surface-mixed-100);
 }
 
 .selected {
-  background-color: #111111;
-  border-left: solid 3px #383838;
+  background-color: var(--color-surface-mixed-100);
+  border-left: solid 3px var(--color-primary-400);
 }
 
 .tooltip {
@@ -86,12 +86,12 @@ li:hover {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  background-color: #383838;
+  background-color: var(--color-surface-mixed-300);
   border: solid 1px white;
   color: #fff;
   text-align: center;
   padding: 5px 0;
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   position: absolute;
   z-index: 1;
   top: 0;
