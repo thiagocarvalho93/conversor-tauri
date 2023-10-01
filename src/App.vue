@@ -12,14 +12,16 @@ import SelectList from "./components/SelectList.vue";
       <!-- body content -->
       <SelectList :items="unitList" v-model="sourceUnit" />
       <div class="middle-section">
-        <unicon width="20px" :name="selectedType.icon" fill="var(--color-primary-400)"></unicon>
+        <unicon width="30px" :name="selectedType.icon" fill="var(--color-primary-400)"></unicon>
         <span class="type-title">
           {{ selectedType.title }}
         </span>
         <input type="number" v-model="inputValue" />
+        <p>=</p>
         <input type="number" :value="outputValue" readonly />
         <div class="btn-copy" @click="copy">
-          <unicon name="copy" fill="var(--color-surface-mixed-100)"></unicon>
+          Copy
+          <!-- <unicon name="copy" fill="var(--color-surface-mixed-100)"></unicon> -->
         </div>
       </div>
       <SelectList :items="unitList" v-model="targetUnit" />
@@ -122,9 +124,9 @@ body {
 
 input[type="number"] {
   width: 120px;
-  margin-bottom: 20px;
   border-radius: var(--border-radius);
   height: 30px;
+  margin-block: 4px;
   font-size: large;
   border: solid 1px var(--color-surface-mixed-200);
   padding-inline: 6px;
@@ -142,20 +144,28 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input:focus-visible {
   outline: 2px solid var(--color-primary-400);
-  border-radius: 3px;
 }
 
 .btn-copy {
   border-radius: var(--border-radius);
+  margin-top: 20px;
   height: 30px;
   width: 120px;
-  font-size: large;
+  font-size: medium;
   text-align: center;
-  padding-block: 1px;
   padding-inline: 6px;
   background-color: var(--color-primary-400);
   color: var(--color-surface-mixed-100);
   cursor: pointer;
   font-weight: 600;
+  transition: background-color 0.5s;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.btn-copy:hover {
+  background-color: var(--color-primary-300);
 }
 </style>

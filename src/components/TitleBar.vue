@@ -36,7 +36,6 @@ export default {
   right: 0;
   z-index: 999;
   padding: 4px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .titlebar-button {
   display: inline-flex;
@@ -50,11 +49,11 @@ export default {
 }
 .titlebar-button:hover {
   transition: background 0.4s;
-  background: var(--color-surface-mixed-100);
+  background: var(--color-primary-400);
 }
 
 .close:hover {
   transition: background 0.4s;
-  background: #cf142b
+  background: #cf142b;
 }
 </style>

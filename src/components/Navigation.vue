@@ -66,6 +66,7 @@ li {
   transition: background-color 0.7s;
   cursor: pointer;
   padding: 5px 20px;
+  /* border-radius: var(--border-radius) 0 0 var(--border-radius); */
 }
 
 li:hover {
@@ -87,7 +88,7 @@ li:hover {
   visibility: hidden;
   width: 120px;
   background-color: var(--color-surface-mixed-300);
-  border: solid 1px white;
+  border: solid 1px var(--color-primary-400);
   color: #fff;
   text-align: center;
   padding: 5px 0;
@@ -108,7 +109,7 @@ li:hover {
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent white transparent transparent;
+  border-color: transparent var(--color-primary-400) transparent transparent;
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;

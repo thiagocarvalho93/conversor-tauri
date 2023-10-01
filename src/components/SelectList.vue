@@ -41,7 +41,7 @@ export default {
 
 .select-list-container {
   background-color: var(--color-surface-mixed-100);
-  height: 415px;
+  height: 412px;
   width: 179px;
   overflow-y: auto;
 }
@@ -53,7 +53,8 @@ export default {
   transition: all 0.5s;
 }
 
-.selected, .list-item:hover {
+.selected,
+.list-item:hover {
   background-color: var(--color-primary-600);
   color: var(--color-surface-mixed-100);
 }
@@ -77,5 +78,10 @@ export default {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-primary-600);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:active {
+  background: var(--color-primary-400);
 }
 </style>

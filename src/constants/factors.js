@@ -67,10 +67,17 @@ export const conversionFactors = {
   },
   p: {
     Pa: 1,
-    bar: 1e5,
+    kPa: 1000,
+    MPa: 1000000,
+    bar: 100000,
+    mbar: 100,
     atm: 101325,
     Torr: 133.322,
     psi: 6894.76,
+    inHg: 3386.39,
+    mmHg: 133.322,
+    Nm2: 1,
+    cmH2O: 98.0665,
   },
   tmp: {
     C: {
