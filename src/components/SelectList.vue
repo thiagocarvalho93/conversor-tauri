@@ -43,6 +43,7 @@ export default {
   background-color: #111111;
   height: 415px;
   width: 179px;
+  overflow-y: auto;
 }
 
 .list-item {
@@ -58,5 +59,25 @@ export default {
 
 .selected {
   background-color: #212121;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #383838;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #212121;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 </style>
