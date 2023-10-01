@@ -14,6 +14,8 @@ import {
   uniWindowMaximize,
   uniMinus,
   uniCopy,
+  uniClock,
+  uniExpandAlt,
 } from "vue-unicons/dist/icons";
 
 Unicon.add([
@@ -27,6 +29,8 @@ Unicon.add([
   uniWindowMaximize,
   uniMinus,
   uniCopy,
+  uniClock,
+  uniExpandAlt,
 ]);
 
 createApp(App).use(Unicon).mount("#app");

@@ -29,11 +29,20 @@ import SelectList from "./components/SelectList.vue";
 
 <script>
 import { types } from "./constants/types";
+import converter from "./utils/converter";
 
 export default {
   computed: {
     types() {
       return types;
+    },
+    outputValue() {
+      return converter.convert(
+        this.selectedType.type,
+        this.sourceUnit,
+        this.targetUnit,
+        this.inputValue
+      );
     },
   },
   watch: {
@@ -56,10 +65,10 @@ export default {
     return {
       selectedType: types[0],
       inputValue: 0,
-      outputValue: 0,
       unitList: [],
       sourceUnit: "",
       targetUnit: "",
+      test: 0,
     };
   },
   methods: {
