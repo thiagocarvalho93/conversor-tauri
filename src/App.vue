@@ -5,7 +5,7 @@ import SelectList from "./components/SelectList.vue";
 </script>
 
 <template>
-  <TitleBar />
+  <TitleBar @searchUnits="searchUnits" />
   <div class="container">
     <Navigation :items="types" v-model="selectedType" />
     <div class="main-content">
@@ -51,6 +51,8 @@ export default {
     selectedType: {
       handler(newValue) {
         this.unitList = newValue.units;
+        if (this.unitList.includes(this.sourceUnit) && this.unitList.includes(this.targetUnit))
+          return;
         this.sourceUnit = newValue.units[0];
         this.targetUnit = newValue.units[0];
       },
@@ -76,6 +78,19 @@ export default {
   methods: {
     copy() {
       navigator.clipboard.writeText(this.outputValue);
+    },
+
+    searchUnits(searchString) {
+      if (!searchString.includes(">") || searchString.startsWith(">") || searchString.endsWith(">"))
+        return;
+      const units = searchString.split(">");
+      const type = types.filter((type) => units.every((unit) => type.units.includes(unit)));
+      this.test = type;
+      if (!!type.length) {
+        this.sourceUnit = units[0];
+        this.targetUnit = units[1];
+        this.selectedType = type[0];
+      }
     },
   },
 };
