@@ -1,27 +1,32 @@
 export const types = [
   {
-    type: "temperatura",
+    type: "t",
     icon: "temperature-half",
-    title: "Temperatura",
+    title: "Temperature",
+    units: ["°C", "°F", "K"],
   },
   {
-    type: "pressao",
+    type: "p",
     icon: "compress-alt",
-    title: "Pressão",
+    title: "Pressure",
+    units: ["Pa", "bar", "atm", "Torr"],
   },
   {
-    type: "comprimento",
+    type: "l",
     icon: "ruler",
-    title: "Comprimento",
+    title: "Length",
+    units: ["nm", "mm", "cm", "m", "km", "mi", "ft"],
   },
   {
-    type: "area",
+    type: "a",
     icon: "focus",
-    title: "Área",
+    title: "Area",
+    units: ["nm²", "mm²", "cm²", "m²", "km²", "mi²", "ft²"],
   },
   {
-    type: "massa",
+    type: "m",
     icon: "balance-scale",
-    title: "Massa",
+    title: "Mass",
+    units: ["g", "kg", "ton", "oz", "lb"],
   },
 ];

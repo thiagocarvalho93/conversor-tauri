@@ -33,11 +33,6 @@ export default {
       default: {},
     },
   },
-  data() {
-    return {
-      mouseOver: "",
-    };
-  },
   methods: {
     isSelected(item) {
       if (item.type === this.modelValue.type) {
@@ -102,7 +97,7 @@ li:hover {
   top: 0;
   left: 200%;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 
 .tooltip .tooltiptext::after {
